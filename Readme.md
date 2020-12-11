@@ -21,7 +21,7 @@ _Recommended:Always run the .exe with startup_
 > The .exe will start with startup for every user
 ---
 
-### To stop the .exe open tack manager add end copy recorder.exe _(crtl+shift+esc)_ to open tack manager.
+### To stop the .exe open tack manager and end copy recorder.exe _(crtl+shift+esc)_ to open tack manager.
 ---
 ## If You face any bug then connect mh-Earth on github
 ---
