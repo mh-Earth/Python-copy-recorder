@@ -1,4 +1,5 @@
-import time,datetime
+from datetime import datetime
+import time
 import sys
 import os
 import pyperclip
@@ -10,17 +11,15 @@ def main():
         tmp_value = pyperclip.paste()
         if tmp_value != recent_value:
             try:
-                today=datetime.date.today()
-                today= today.strftime("%B %d,%Y")
-                now=datetime.datetime.now()
-                current_time = now.strftime("%H:%M:%S")
-
                 f=open("paste.txt","a")
+                now = datetime.now()
+                dt_string = now.strftime("Date------->"+"%B %d,%Y "+"Time------>"+"%H:%M:%S")
+
                 recent_value = tmp_value
-                f.write(f"{current_time,today}\n{recent_value}\n\n")
+                f.write(f"------------------{dt_string}-----------------\n{recent_value}\n\n")
                 f.close()
             except Exception as e:
-                break
+                print(e)
         
         time.sleep(1)
     
